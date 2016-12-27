@@ -1,0 +1,31 @@
+<apex:page showHeader="false" sidebar="false" controller="WeatherReportController">
+    <head>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+    </head>
+    <div class="container" id="main">
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th><apex:outputText value="City" /></th>
+                        <th><apex:outputText value="Weather Pattern" /></th>
+                        <th><apex:outputText value="Weather Details" /></th>
+                        <th><apex:outputText value="Current Temperature" /></th>
+                        <th><apex:outputText value="Maximum Temperature" /></th>
+                        <th><apex:outputText value="Minimum Temperature" /></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><apex:outputText value="{!weatherData.city}" /></td>
+                        <td><apex:outputText value="{!weatherData.weather}" /></td>
+                        <td><apex:outputText value="{!weatherData.description}" /></td>
+                        <td><apex:outputText value="{!weatherData.currentTemperature} Degrees" /></td>
+                        <td><apex:outputText value="{!weatherData.maxTemperature} Degrees" /></td>
+                        <td><apex:outputText value="{!weatherData.minTemperature} Degrees" /></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</apex:page>
